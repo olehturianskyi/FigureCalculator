@@ -34,28 +34,31 @@ namespace FigureCalculator
             for (int i = 0; i < choice; i++)
             {
                 string name = Convert.ToString(pointName[i]);
-                Console.WriteLine("Point name:" + name);
+                Console.WriteLine("Point name: " + name);
                 
-                Console.WriteLine("=> X:");
+                Console.Write("=> X: ");
                 int x = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("=> Y:");
+                Console.Write("=> Y: ");
                 int y = Convert.ToInt32(Console.ReadLine());
                 
                 Point point = new Point(x, y, name);  
                 pointArray[i] = point;
             }
             if (choice==3)            
-            {
+            {   
+                Console.WriteLine("TRIANGLE");
                 Figure figure = new Figure(pointArray[0], pointArray[1], pointArray[2]);
                 figure.PerimeterCalculator();
             }
             if (choice == 4)
             {
+                Console.WriteLine("QUADRILATERAL");
                 Figure figure = new Figure(pointArray[0], pointArray[1], pointArray[2], pointArray[3]);
                 figure.PerimeterCalculator();
             }
             if(choice == 5)
             {
+                Console.WriteLine("PENTAGON");
                 Figure figure = new Figure(pointArray[0], pointArray[1], pointArray[2], pointArray[3], pointArray[4]);
                 figure.PerimeterCalculator();
             }
